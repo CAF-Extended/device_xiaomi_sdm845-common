@@ -153,3 +153,5 @@ persist.baikal.dolby.enable=false
 
 persist.sys.binary_xml=false
 
+# Perf
+ro.vendor.extension_library=libqti-perfd-client.so
