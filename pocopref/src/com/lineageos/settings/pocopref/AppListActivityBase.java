@@ -40,8 +40,6 @@ public abstract class AppListActivityBase extends BaseActivity {
 
         super.onCreate(savedInstanceState);
 
-        getActionBar().setDisplayHomeAsUpEnabled(true);
-
         setContentView(R.layout.app_list_activity);
 
         dListView = (ListView) findViewById(R.id.app_list_view);

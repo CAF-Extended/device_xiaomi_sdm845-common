@@ -51,8 +51,6 @@ public class AppProfileActivity extends BaseActivity {
 
         Log.e(TAG, "AppProfileActivity: mPackageName=" + mPackageName + ", mAppName=" + mAppName + ", mAppUid=" + mAppUid);
 
-
-        getActionBar().setDisplayHomeAsUpEnabled(true);
         if( mAppName != null ) {
             setTitle(mAppName);
         }

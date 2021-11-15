@@ -30,7 +30,6 @@ import androidx.fragment.app.FragmentActivity;
 
 public abstract class BaseActivity extends FragmentActivity {
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

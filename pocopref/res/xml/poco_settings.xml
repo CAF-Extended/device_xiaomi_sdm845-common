@@ -13,6 +13,7 @@
 
     <com.lineageos.settings.pocopref.SecureSettingListPreference
         android:key="vib_waveform"
+        android:icon="@drawable/ic_wave"        
         android:title="@string/vib_waveform_title"
         android:entries="@array/vib_waveform_listentries"
         android:entryValues="@array/vib_waveform_listvalues"
@@ -60,5 +61,5 @@
         android:icon="@drawable/ic_power" />
 
 	</PreferenceCategory>   
-
+  
 </PreferenceScreen>

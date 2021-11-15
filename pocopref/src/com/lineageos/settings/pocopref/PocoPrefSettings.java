@@ -23,8 +23,6 @@ import androidx.preference.SwitchPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.SwitchPreference;
-import androidx.preference.TwoStatePreference;
-import com.lineageos.settings.pocopref.BframeworkActivity;
 import com.lineageos.settings.pocopref.SecureSettingListPreference;
 import com.lineageos.settings.pocopref.SuShell;
 import com.lineageos.settings.pocopref.SuTask;
@@ -126,10 +124,6 @@ public class PocoPrefSettings extends PreferenceFragment implements
         mSelinuxPersistence.setChecked(getContext()
         .getSharedPreferences("selinux_pref", Context.MODE_PRIVATE)
         .contains(PREF_SELINUX_MODE));
-                   
-        mDolby = (SwitchPreference) findPreference(SYSTEM_PROPERTY_DOLBY);
-        mDolby.setChecked(SystemProperties.getBoolean(SYSTEM_PROPERTY_DOLBY, false));
-        mDolby.setOnPreferenceChangeListener(this);
 		
         mWaveFormValue = mPrefs.getString(KEY_WAVEFORM, DEFAULT_KEY_WAVEFORM);  
         mWaveForm = (SecureSettingListPreference) findPreference(KEY_WAVEFORM);
@@ -172,11 +166,6 @@ public class PocoPrefSettings extends PreferenceFragment implements
                   setSelinuxEnabled(mSelinuxMode.isChecked(), (Boolean) value);
                   return true;
                 }
-                break;
-
-            case SYSTEM_PROPERTY_DOLBY:
-                ((SwitchPreference)preference).setChecked((Boolean) value);
-                setSystemPropertyBoolean(SYSTEM_PROPERTY_DOLBY, (Boolean) value);
                 break;
 
             case KEY_WAVEFORM:
