@@ -32,7 +32,7 @@
         android:entries="@array/default_perf_listentries"
         android:entryValues="@array/default_perf_listvalues" 
         android:icon="@drawable/ic_perf"
-        android:defaultValue="0"
+        android:defaultValue="4"
         android:summary="%s"/>
 
         <com.lineageos.settings.pocopref.SecureSettingListPreference
@@ -41,7 +41,7 @@
          android:entries="@array/default_therm_listentries"
          android:icon="@drawable/ic_thermal"
          android:entryValues="@array/default_therm_listvalues"
-         android:defaultValue="0"
+         android:defaultValue="6"
          android:summary="%s" />          
 
     </PreferenceCategory>  

@@ -49,8 +49,6 @@ public class Startup extends BroadcastReceiver {
         // System
         VibratorStrengthPreference.restore(context);
         PocoPrefSettings.restore(context);
-        PerformanceUtils.startService(context);
         KCalSettings.restore(context);
-        ThermalUtils.startService(context);        
     }
 }

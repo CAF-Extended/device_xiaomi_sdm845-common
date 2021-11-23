@@ -113,11 +113,11 @@ public class PocoPrefSettings extends PreferenceFragment implements
 
 
             mDefaultPerfProfile = (SecureSettingListPreference) findPreference(DEFAULT_PERF_PROFILE);
-            mDefaultPerfProfile.setValue(FileUtil.getStringProp(PERFORMANCE_SYSTEM_PROPERTY, "0"));
+            mDefaultPerfProfile.setValue(FileUtil.getStringProp(PERFORMANCE_SYSTEM_PROPERTY, "4"));
             mDefaultPerfProfile.setOnPreferenceChangeListener(this);            
 
             mDefaultThermProfile = (SecureSettingListPreference) findPreference(DEFAULT_THERMAL_PROFILE);
-            mDefaultThermProfile.setValue(FileUtil.getStringProp(THERMAL_SYSTEM_PROPERTY, "0"));
+            mDefaultThermProfile.setValue(FileUtil.getStringProp(THERMAL_SYSTEM_PROPERTY, "6"));
             mDefaultThermProfile.setOnPreferenceChangeListener(this);
 	        	
 

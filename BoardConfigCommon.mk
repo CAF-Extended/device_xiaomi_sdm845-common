@@ -104,6 +104,7 @@ TARGET_USES_DRM_PP := true
 TARGET_USES_ION := true
 #Enable Wide color gamut support
 TARGET_HAS_WIDE_COLOR_DISPLAY := true
+#TARGET_USES_VULKAN := true
 
 # HIDL
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml

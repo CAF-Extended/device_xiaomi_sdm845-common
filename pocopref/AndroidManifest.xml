@@ -76,6 +76,13 @@
             </intent-filter>
         </activity>
 
+        <receiver android:name="com.lineageos.settings.pocopref.BootCompletedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        
         <service
             android:name="com.lineageos.settings.pocopref.PerformanceService"
             android:permission="PerformanceService">
