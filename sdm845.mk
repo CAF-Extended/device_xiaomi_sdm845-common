@@ -14,9 +14,6 @@ $(call inherit-product-if-exists, vendor/xiaomi/sdm845-common/sdm845-common-vend
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
-# Board
-TARGET_BOARD_PLATFORM := sdm845
-
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
@@ -145,6 +142,7 @@ PRODUCT_PACKAGES += \
     init.qcom.sh \
     init.qti.fm.sh \
     init.qcom.rc \
+    init.qcom.power.rc \
     init.target.rc \
     ueventd.qcom.rc \
     init.performance.rc \
@@ -342,16 +340,12 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml \
     $(LOCAL_PATH)/permissions/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-qti.xml
 
-# QTI
-TARGET_COMMON_QTI_COMPONENTS := \
-    av \
-    bt \
-    usb \
-    media \
-    display \
-    perf \
-    wfd \
-    telephony
+# QTI common
+-include device/qcom/common/media/qti-media.mk
+-include vendor/qcom/common/av/av-vendor.mk
+-include device/qcom/common/usb/qti-usb.mk
+-include vendor/qcom/common/bt/bt-vendor.mk
+-include vendor/qcom/common/audio/audio-vendor.mk
 
 # Radio
 PRODUCT_PACKAGES += \
@@ -405,6 +399,9 @@ PRODUCT_PACKAGES += \
     qti_telephony_hidl_wrapper.xml \
     qti-telephony-utils \
     qti_telephony_utils.xml \
+    telephony-ext
+
+PRODUCT_BOOT_JARS += \
     telephony-ext
 
 # Tethering
@@ -625,6 +622,3 @@ PRODUCT_PACKAGES += \
     libstdc++.vendor \
     vendor.qti.hardware.camera.device@1.0.vendor \
     libtinyxml.vendor
-
-PRODUCT_BOOT_JARS += \
-    QXPerformance
