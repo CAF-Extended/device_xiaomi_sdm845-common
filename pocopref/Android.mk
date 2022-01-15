@@ -16,8 +16,6 @@ LOCAL_STATIC_ANDROID_LIBRARIES := \
     androidx.core_core \
     androidx.preference_preference \
     org.lineageos.settings.resources
-
-
 include frameworks/base/packages/SettingsLib/common.mk
 
 include $(BUILD_PACKAGE)

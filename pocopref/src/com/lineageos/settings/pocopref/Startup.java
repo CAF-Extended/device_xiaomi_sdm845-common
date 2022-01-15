@@ -21,7 +21,6 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import com.lineageos.settings.pocopref.kcal.KCalSettings;
 import com.lineageos.settings.pocopref.Utils;
 import androidx.preference.PreferenceManager;
 import com.lineageos.settings.pocopref.VibratorStrengthPreference;
@@ -49,6 +48,5 @@ public class Startup extends BroadcastReceiver {
         // System
         VibratorStrengthPreference.restore(context);
         PocoPrefSettings.restore(context);
-        KCalSettings.restore(context);
     }
 }
