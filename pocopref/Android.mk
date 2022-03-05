@@ -15,7 +15,7 @@ LOCAL_PROGUARD_FLAG_FILES := proguard.flags
 LOCAL_STATIC_ANDROID_LIBRARIES := \
     androidx.core_core \
     androidx.preference_preference \
-    org.lineageos.settings.resources
+    org.aospextended.settings.resources
 
 include frameworks/base/packages/SettingsLib/common.mk
 
